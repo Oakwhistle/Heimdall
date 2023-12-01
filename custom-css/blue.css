@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500:600&display=swap');
+.searchform {
+margin: 20px auto;
+padding: 2px;
+border-radius: 4px;
+width: 80%;
+max-width: 620px;
+}
+.searchform .input-container {
+background: #ffffff;
+border-radius: 5px;
+box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0.4);
+overflow: hidden;
+position: relative;
+display: flex;
+}
+.searchform button {
+position: absolute;
+right: 0px;
+top: 0px;
+border: none;
+font-size: 16px;
+padding: 7px 8px;
+line-height: 38px;
+font-weight: 500;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+color: #ffffff;
+text-transform: uppercase;
+background: #2d4980;
+}
+#app {
+background-position: right;
+}
+#app #sortable,
+#app main {
+padding: 8px;
+}
+#config-buttons {
+bottom: 50%;
+transform: translateY(50%);
+border-top-left-radius: 15px;
+border-bottom-left-radius: 15px;
+box-shadow: rgba(255, 255, 255, 0.1) -1px 1px 1px 0, rgba(255, 255, 255, 0.1) 0 -1px 1px 0,
+rgba(0, 0, 0, 0.1) -1px 0 20px 5px;
+background-color: rgba(40, 40, 40, 0.25);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+}
+#config-buttons a {
+background: none;
+}
+#config-buttons a svg {
+transition: all 0.1s ease-in-out;
+color: rgba(255, 255, 255, 0.5);
+}
+#config-buttons a:hover svg {
+transform: scale(1.1);
+color: rgba(6, 105, 205, 0.95);
+}
+
+.black {
+color: white !important;
+}
+
+.item {
+box-shadow: rgba(0, 0, 0, 0.05) -1px -1px 5px 0, rgba(0, 0, 0, 0.15) 0px 20px 25px -5px,
+rgba(0, 0, 0, 0.04) 0px 10px 10px -5px !important;
+border-radius: 4% 4%;
+background-image: none;
+border:1px solid rgba(6, 105, 205, 0.45);
+outline: none;
+height: 75px;
+width: 260px;
+margin: 0.6rem;
+padding: .5rem 5px .5rem .5rem;
+transition: all 0.25s ease-in-out;
+transition-property: transform, box-shadow, background-color;
+background-color: rgba(14, 26, 38, 0.9) !important;
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+}
+.item:after {
+height: 75px;
+opacity: 0.3;
+}
+.item:hover {
+transform: scale(1.1);
+background-color: rgba(100, 175, 250, 0.2) !important;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 60px 40px -7px !important;
+}
+.item .svg-inline--fa {
+height: 30px;
+vertical-align: middle;
+opacity: 0.3;
+width: .675em;
+line-height: 110px;
+}
+.item .link {
+line-height: 110px;
+}
+@media only screen and (max-width: 750px) {
+.item {
+padding-top: 2rem;
+padding-bottom: 2rem;
+}
+#config-buttons {
+display: none;
+}
+}
+
+.details * {
+color: white !important;
+}
+.details {
+padding: 0 0.5rem;
+}
+
+.app-icon {
+width: 42px !important;
+height: 42px !important;
+filter: drop-shadow(1px 1px 2px rgba(10, 0, 20, 0.1));
+}
+
+element {
+
+}
+.app-icon-container {
+width: 60px;
+height: 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-right: 5px;
+flex: 0 0 50px;
+}
+.livestats-container {
+margin-top: 0.5rem;
+}
+.livestats-container .livestats .title {
+margin-bottom: 2px;
+}
+.livestats-container .livestats li {
+padding-right: 1rem;
+}
+
+.livestats-container strong {
+font-weight: 275 !important;
+padding: 0 2px;
+}
+
+.details > .title {
+font-weight: 375;
+font-size: 1 rem !important;
+letter-spacing: 1px;
+font-family: "Orbitron", sans-serif;
+text-shadow: rgba(10, 0, 60, 0.25) 1px 0 5px;
+text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 2px rgba(10, 0, 60, 0.25);
+transition: all 0.25s ease-in-out;
+}
+.item:hover .details > .title {
+text-shadow: -1px -1px 1px rgba(100,175, 250, 0.1), 1px 1px 5px rgba(10, 0, 60, 0.2);
+}

@@ -1,0 +1,39 @@
+version: "3.3"
+services:
+  heimdall:
+    image: lscr.io/linuxserver/heimdall:latest
+    container_name: heimdall
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Madrid
+    volumes:
+      - ./config:/config
+    env_file:
+      - .env
+    #ports:
+      #- 80
+      #- 8280:80
+      #- 80:80
+      #- 443:443
+    restart: unless-stopped
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=traefik
+      - traefik.http.routers.heimdall-front.rule=Host(`${URL}`)
+      - traefik.http.routers.heimdall-front.entryPoints=websecure
+      - traefik.http.routers.heimdall-front.tls.certresolver=le
+      - traefik.http.routers.heimdall-front.service=heimdall-front
+      - traefik.http.routers.heimdall-front.middlewares=authentik
+      - traefik.http.services.heimdall-front.loadbalancer.server.port=80
+    networks:
+      - heimdall
+      #- borgmatic
+      - traefik
+
+networks:
+  heimdall:
+    name: heimdall
+  #borgmatic:
+  traefik:
+    external: true
